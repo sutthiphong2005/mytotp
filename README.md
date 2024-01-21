@@ -3,14 +3,18 @@
 how to run golang app (http://localhost:8080)
 =================
 cd golang
+
 go mod tidy
+
 go run main.go
 
 
 how to run react app (http://localhost:5173)
 =================
 cd react
+
 npm install
+
 npm run dev
 
 
@@ -20,6 +24,12 @@ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password --name mysqltest mysq
 
 how to run mysql command line to create database and table
 ===================
+$ docker ps
+
+CONTAINER ID   IMAGE         COMMAND                  CREATED         STATUS         PORTS                               NAMES
+9af429b3cacd   mysql:8.3.0   "docker-entrypoint.s…"   8 minutes ago   Up 8 minutes   33060/tcp, 0.0.0.0:3307->3306/tcp   mysqltest
+
+
 docker exec -it mysqltest sh
 
 sh-4.4# mysql -u root -p
